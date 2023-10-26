@@ -18,7 +18,7 @@ Data are MC generated to simulate registration of high energy gamma particles in
 Bock,R.. (2007). MAGIC Gamma Telescope. UCI Machine Learning Repository. https://doi.org/10.24432/C52C8B.
 
 ## Importing Libaries
-- Necessary libraries and its purpose for this project:
+Necessary libraries and its purpose for this project:
   - `numpy`: data manipulation and array operation.
   - `pandas`: load and manipulate dataset, as well as for data preprocessing and analysis.
   - `matplotlib`: `matplotlib.pyplot`, create histograms for data visualization.
@@ -29,5 +29,33 @@ Bock,R.. (2007). MAGIC Gamma Telescope. UCI Machine Learning Repository. https:/
   - `sklearn.linear_model`: `LogisticRegression` to create and evaluate a logistic regression model.
   - `sklearn.svm`: `SVC` to create and evaluate an SVM model
   - `tensorflow`: used to create and train a neural network for classification
- 
-
+## Dataset Loading and Preprocessing
+  - Loads a dataset from a file named "magic04.data" using pandas and defines column names for the dataset.
+  - Converts the "class" column to binary values (0 or 1) by mapping "g" to 1 and "h" to 0.
+  - Plots histograms for each feature, comparing the distributions for class 0 (hadron) and class 1 (gamma).
+## Train, Validation, and Test Datasets:
+  - The dataset is split into train, validation, and test sets using the np.split function, with a 60-20-20 split ratio.
+## Data Scaling and Oversampling
+  - Scale the features and, optionally, oversample the dataset.
+  - `StandardScaler` is used to scale the features
+## k-Nearest Neighbours (kNN) Classifier
+  - Uses the scikit-learn library to create a k-Nearest Neighbors (kNN) model with 5 neighbors.
+  - Fits the model to the training data and makes predictions on the test data.
+  - **Accuracy of 81%**
+## Naive Bayes Classifier
+  - Uses `scikit-learn`'s Gaussian Naive Bayes classifier to create a Naive Bayes model.
+  - Fits the model to the training data and makes predictions on the test data.
+  - **Accuracy of 73%**
+## Logistic Regression Classifier
+  - Logistic regression model is created using `scikit-learn`
+  - The model is trained on the training data and used to predict on the test data.
+  - **Accuracy of 78%**
+## Support Vector Machine (SVM) Classifier 
+  - Support Vector Machine (SVM) classifier is created using `scikit-learn`.
+  - Model is trained on the training data and used to predict on the test data.
+  - **Accuracy of 85%**
+## Neural Network (Deep Learning) Classifier
+  - Neural network model is defined using `TensorFlow`/`Keras`
+  - Performs a hyperparameter grid search, iterating over various combinations of the number of nodes, dropout probability, learning rate, and batch size.
+  - Trains multiple neural network models with different hyperparameters on the training data and selects the model with the lowest validation loss.
+  - The chosen neural network model has the **accuracy of 87%**
