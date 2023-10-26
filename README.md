@@ -41,19 +41,19 @@ Necessary libraries and its purpose for this project:
 ## k-Nearest Neighbours (kNN) Classifier
   - Uses the scikit-learn library to create a k-Nearest Neighbors (kNN) model with 5 neighbors.
   - Fits the model to the training data and makes predictions on the test data.
-  - **Accuracy of 81%**
+  - **Accuracy: 81%**
 ## Naive Bayes Classifier
   - Uses `scikit-learn`'s Gaussian Naive Bayes classifier to create a Naive Bayes model.
   - Fits the model to the training data and makes predictions on the test data.
-  - **Accuracy of 73%**
+  - **Accuracy: 73%**
 ## Logistic Regression Classifier
   - Logistic regression model is created using `scikit-learn`
   - The model is trained on the training data and used to predict on the test data.
-  - **Accuracy of 78%**
+  - **Accuracy: 78%**
 ## Support Vector Machine (SVM) Classifier 
   - Support Vector Machine (SVM) classifier is created using `scikit-learn`.
   - Model is trained on the training data and used to predict on the test data.
-  - **Accuracy of 85%**
+  - **Accuracy: 85%**
 ## Neural Network (Deep Learning) Classifier
   - Neural network model is defined using `TensorFlow`/`Keras`
   - Performs a hyperparameter grid search, iterating over various combinations of the number of nodes, dropout probability, learning rate, and batch size.
